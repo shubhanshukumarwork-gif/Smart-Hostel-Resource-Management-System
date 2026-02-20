@@ -40,4 +40,47 @@ Submit leave requests
 
 
 
-- recorded_at
+
+# Entity Relationships
+
+##Room and Student
+
+One Room can have up to 2 Students.
+One Student belongs to exactly one Room.
+Relationship: One-to-Many (Room → Student)
+
+## Student and Complaint
+
+One Student can raise multiple Complaints.
+Each Complaint belongs to one Student.
+Relationship: One-to-Many
+
+## Student and Payment
+
+One Student can have multiple Payment records.
+Each Payment belongs to one Student.
+Relationship: One-to-Many
+
+## Student and LeaveRequest
+
+One Student can create multiple Leave Requests.
+Each Leave Request belongs to one Student.
+Relationship: One-to-Many
+
+## Warden and Complaint
+
+One Warden handles multiple Complaints.
+Each Complaint is assigned to one Warden.
+Relationship: One-to-Many
+
+## Warden and LeaveRequest
+
+One Warden approves or rejects multiple Leave Requests.
+Each Leave Request is processed by one Warden.
+Relationship: One-to-Many
+
+## Room and ElectricityUsage
+
+One Room can have multiple Electricity Usage records (monthly basis).
+Each Electricity record belongs to one Room.
+Relationship: One-to-Many
