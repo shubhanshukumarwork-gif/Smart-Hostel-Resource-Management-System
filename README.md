@@ -30,7 +30,7 @@ A system-level full-stack application that optimizes hostel room allocation usin
 
 ## 🗄 Database Design
 
-### 📌 Entities
+### Entities
 
 #### 1️⃣ Student
 - student_id (Primary Key)
