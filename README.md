@@ -2,93 +2,42 @@
 A system-level full-stack application that optimizes hostel room allocation using scheduling concepts, monitors electricity usage, and streamlines complaint management through secure role-based authentication and real-time data processing.
 
 
-## 👥 User Roles & Permissions
+# User Roles and Permissions
 
-### 🔹 Admin
-- Manage students
-- Manage rooms
-- Assign rooms
-- Monitor electricity usage
-- View & resolve complaints
-- Track payments
-- Manage wardens
+## Admin
+The Admin has full control over hostel operations and system management.
 
-### 🔹 Warden
-- View allocated students
-- Monitor complaints
-- Approve/reject leave requests
-- Update room status
+Responsibilities:
 
-### 🔹 Student
-- View profile
-- View room details
-- Raise complaints
-- View payment history
-- Submit leave request
+Manage student records (add, update, remove)
+Manage room details
+Assign rooms to students
+Monitor electricity usage
+View and resolve complaints
+Track and manage payment records
+Manage warden accounts
+
+## Warden
+The Warden is responsible for monitoring hostel activities and handling student-related operational tasks.
+
+Responsibilities:
+
+View allocated students
+Monitor and update complaint status
+Approve or reject leave requests
+Update room status
+
+## Student
+The Student can access personal and hostel-related information through the system.
+
+Permissions:
+
+View personal profile
+View assigned room details
+Raise complaints
+View payment history
+Submit leave requests
 
 
 
-## 🗄 Database Design
-
-### Entities
-
-#### 1️⃣ Student
-- student_id (Primary Key)
-- name
-- email
-- phone
-- course
-- year
-- room_id (Foreign Key)
-- created_at
-
-#### 2️⃣ Room
-- room_id (Primary Key)
-- room_number
-- floor
-- capacity (Max 2 students)
-- status (Available / Full / Maintenance)
-
-#### 3️⃣ Warden
-- warden_id (Primary Key)
-- name
-- email
-- phone
-
-#### 4️⃣ Admin
-- admin_id (Primary Key)
-- name
-- email
-- password
-
-#### 5️⃣ Complaint
-- complaint_id (Primary Key)
-- student_id (Foreign Key)
-- room_id (Foreign Key)
-- warden_id (Foreign Key)
-- description
-- status (Pending / Resolved)
-- created_at
-
-#### 6️⃣ Payment
-- payment_id (Primary Key)
-- student_id (Foreign Key)
-- amount
-- payment_date
-- status
-
-#### 7️⃣ LeaveRequest
-- leave_id (Primary Key)
-- student_id (Foreign Key)
-- warden_id (Foreign Key)
-- from_date
-- to_date
-- reason
-- status (Pending / Approved / Rejected)
-
-#### 8️⃣ ElectricityUsage
-- usage_id (Primary Key)
-- room_id (Foreign Key)
-- month
-- units_consumed
 - recorded_at
