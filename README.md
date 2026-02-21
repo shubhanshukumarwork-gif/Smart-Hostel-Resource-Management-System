@@ -84,3 +84,10 @@ Relationship: One-to-Many
 One Room can have multiple Electricity Usage records (monthly basis).
 Each Electricity record belongs to one Room.
 Relationship: One-to-Many
+
+
+
+
+## ER DIAGRAM
+
+![ER Diagram](student hostel management sysytem.png)
