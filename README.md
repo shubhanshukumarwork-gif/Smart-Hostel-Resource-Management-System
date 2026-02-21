@@ -91,3 +91,23 @@ Relationship: One-to-Many
 ## ER DIAGRAM
 
 ![ER Diagram](student hostel management sysytem.png)
+
+
+
+
+
+## Relational Schema
+
+Student(student_id PK, name, email, phone, course, year, room_id FK)
+
+Room(room_id PK, room_number, floor, capacity, status)
+
+Complaint(complaint_id PK, student_id FK, warden_id FK, description, status, created_at)
+
+LeaveRequest(leave_id PK, student_id FK, warden_id FK, from_date, to_date, reason, status)
+
+Payment(payment_id PK, student_id FK, amount, payment_date, status)
+
+Warden(warden_id PK, name, email, phone)
+
+ElectricityUsage(usage_id PK, room_id FK, month, units_consumed, recorded_at)
